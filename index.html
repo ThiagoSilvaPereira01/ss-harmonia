@@ -14,8 +14,30 @@
   <!-- Favicon Oficial -->
   <link rel="icon" type="image/png" href="assets/favicon.png">
 
-  <!-- Estilos -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Estilos com Cache Buster -->
+  <link rel="stylesheet" href="style.css?v=5.0">
+
+  <!-- Paleta Oficial SS Harmonia (Garantia de Renderização Imediata) -->
+  <style>
+    :root {
+      --color-oliva: #6b705c !important;
+      --color-areia: #e2dac7 !important;
+      --color-terracota: #ad4e3b !important;
+      --color-bordo: #641d2e !important;
+      --color-marrom: #422820 !important;
+      --color-lavanda: #615668 !important;
+    }
+    .hero-presentation-screen {
+      background-color: #6b705c !important;
+      background: radial-gradient(circle at 50% 35%, #787e67 0%, #6b705c 55%, #555947 100%) !important;
+    }
+    .diferenciais-section {
+      background-color: #6b705c !important;
+    }
+    .footer {
+      background-color: #422820 !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -23,7 +45,7 @@
   <header class="header" id="main-header">
     <div class="container header-container">
       <a href="#hero" class="brand-logo" aria-label="SS Harmonia - Início">
-        <img src="assets/logo-seal-dark.png" alt="Selo SS Harmonia" class="logo-seal">
+        <img src="assets/logo-seal-light.png" alt="Selo SS Harmonia" class="logo-seal">
         <div class="logo-text-group">
           <span class="logo-title">SS Harmonia</span>
           <span class="logo-tagline">corpo & mente</span>
@@ -62,96 +84,62 @@
   <div class="menu-overlay" id="menu-overlay"></div>
 
   <main>
-    <!-- ==================== HERO SECTION ==================== -->
-    <section class="hero-section" id="hero">
-      <div class="container hero-grid">
-        <div class="hero-content reveal-on-scroll">
-          <div class="hero-badge">
-            <svg class="badge-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
-            </svg>
-            <span>Pausa Consciente & Bem-Estar Integral</span>
-          </div>
+    <!-- ==================== HERO / APRESENTAÇÃO IMERSIVA ==================== -->
+    <section class="hero-presentation-screen" id="hero">
+      <!-- Marca d'água orgânica da silhueta no fundo -->
+      <div class="hero-watermark-shape" aria-hidden="true">
+        <svg viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="160" cy="90" r="45" fill="currentColor" />
+          <path d="M70,180 C180,180 250,220 220,310 C190,400 60,390 60,490 C60,570 180,590 230,550 C260,520 250,470 210,480 C170,490 120,490 120,440 C120,380 230,370 270,300 C310,230 260,130 110,120 Z" fill="currentColor" />
+        </svg>
+      </div>
 
-          <h1 class="hero-title">
-            Seu corpo pede. <br>
-            Sua mente agradece. <br>
-            <span class="highlight-text">Harmonia acontece.</span>
+      <div class="container hero-presentation-container">
+        <!-- Logotipo Oficial Central com Efeito Halo -->
+        <div class="hero-brand-center reveal-on-scroll">
+          <div class="brand-halo"></div>
+          <img src="assets/logo-transparent-light.png" alt="SS Harmonia - Corpo & Mente" class="hero-brand-emblem">
+        </div>
+
+        <!-- Headline & Mensagem de Impacto -->
+        <div class="hero-text-center reveal-on-scroll">
+          <h1 class="hero-presentation-headline">
+            Seu corpo pede. Sua mente agradece. <br>
+            <span class="highlight-presentation">Harmonia acontece.</span>
           </h1>
 
-          <p class="hero-description">
-            Amenize o estresse do dia a dia e transforme sua relação com o autocuidado. Levamos a experiência revigorante da <strong>quick massage</strong> para dentro de escritórios, eventos e residências com técnica refinada e toque humano acolhedor.
+          <p class="hero-presentation-lead">
+            Amenize o estresse do dia a dia e transforme sua relação com o autocuidado. Levamos a massoterapia especializada e a quick massage até sua empresa, evento ou residência com técnica refinada e toque humano acolhedor.
           </p>
 
-          <div class="hero-cta-group">
-            <a href="#contato" class="btn btn-primary">
-              <span>Agendar Massagem</span>
+          <div class="hero-presentation-actions">
+            <a href="#contato" class="btn btn-terracota btn-lg">
+              <span>Agendar Sessão</span>
               <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <line x1="5" y1="12" x2="19" y2="12"></line>
                 <polyline points="12 5 19 12 12 19"></polyline>
               </svg>
             </a>
-            <a href="#servicos" class="btn btn-outline">Conhecer Modalidades</a>
+            <a href="#servicos" class="btn btn-presentation-outline">Conhecer Modalidades</a>
           </div>
 
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-number">+500</span>
-              <span class="stat-label">Sessões Realizadas</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <span class="stat-number">15-30m</span>
-              <span class="stat-label">Alívio Imediato</span>
-            </div>
-            <div class="stat-divider"></div>
-            <div class="stat-item">
-              <span class="stat-number">100%</span>
-              <span class="stat-label">Cuidado Humano</span>
-            </div>
+          <div class="hero-pill-badges">
+            <span class="hero-pill">⏱ 15 a 30 minutos</span>
+            <span class="hero-pill">👔 Sem despir-se</span>
+            <span class="hero-pill">🏢 In Company & Home Care</span>
+            <span class="hero-pill">✨ Cuidado 100% humanizado</span>
           </div>
         </div>
 
-        <div class="hero-visual reveal-on-scroll">
-          <div class="visual-wrapper">
-            <!-- Moldura orgânica decorativa -->
-            <div class="organic-blob-bg"></div>
-            
-            <div class="hero-card-illustration">
-              <div class="massage-card-preview">
-                <div class="icon-bubble logo-bubble">
-                  <img src="assets/logo-seal-dark.png" alt="Selo Oficial SS Harmonia" class="hero-seal-icon">
-                </div>
-                <h3>Quick Massage</h3>
-                <p>Relaxamento cervical, ombros, costas e braços em cadeira ergonômica de alto padrão.</p>
-                <div class="pill-list">
-                  <span class="pill">Sem despir-se</span>
-                  <span class="pill">Praticidade</span>
-                  <span class="pill">Foco e energia</span>
-                </div>
-              </div>
-
-              <!-- Badge Flutuante 1 -->
-              <div class="floating-badge badge-top-right">
-                <span class="badge-dot"></span>
-                <span>Atendimento In Company & Residencial</span>
-              </div>
-
-              <!-- Badge Flutuante 2 -->
-              <div class="floating-badge badge-bottom-left">
-                <div class="badge-heart">
-                  <svg viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06a5.5 5.5 0 0 0 0-7.78z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <strong>Profissionalismo com alma</strong>
-                  <small>Energia positiva em cada sessão</small>
-                </div>
-              </div>
-            </div>
+        <!-- Indicador de Scroll Suave -->
+        <a href="#sobre" class="hero-scroll-prompt" aria-label="Rolar para conhecer a história">
+          <span>Role para conhecer</span>
+          <div class="scroll-chevron">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
           </div>
-        </div>
+        </a>
       </div>
 
       <!-- Divisor orgânico em curva suave -->
@@ -322,7 +310,7 @@
             </div>
 
             <div class="service-card-footer">
-              <a href="#contato" class="btn btn-primary btn-block" data-service="Quick Massage Corporativa">
+              <a href="#contato" class="btn btn-oliva btn-block" data-service="Quick Massage Corporativa">
                 Solicitar Proposta In Company
               </a>
             </div>
@@ -375,8 +363,8 @@
           <!-- Card 3: Pessoas Físicas / Residencial -->
           <article class="service-card reveal-on-scroll">
             <div class="service-card-header">
-              <div class="service-tag">Pessoas Físicas</div>
-              <div class="service-icon-box">
+              <div class="service-tag tag-lavanda">Pessoas Físicas & Bem-Estar</div>
+              <div class="service-icon-box icon-lavanda">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                   <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
                   <polyline points="9 22 9 12 15 12 15 22"/>
@@ -410,7 +398,7 @@
             </div>
 
             <div class="service-card-footer">
-              <a href="#contato" class="btn btn-primary btn-block" data-service="Atendimento Particular / Home Care">
+              <a href="#contato" class="btn btn-lavanda btn-block" data-service="Atendimento Particular / Home Care">
                 Agendar Sessão Particular
               </a>
             </div>
@@ -421,6 +409,14 @@
 
     <!-- ==================== DIFERENCIAIS ==================== -->
     <section class="section diferenciais-section" id="diferenciais">
+      <!-- Marca d'água orgânica de fundo -->
+      <div class="diferenciais-watermark" aria-hidden="true">
+        <svg viewBox="0 0 400 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="160" cy="90" r="45" fill="currentColor" />
+          <path d="M70,180 C180,180 250,220 220,310 C190,400 60,390 60,490 C60,570 180,590 230,550 C260,520 250,470 210,480 C170,490 120,490 120,440 C120,380 230,370 270,300 C310,230 260,130 110,120 Z" fill="currentColor" />
+        </svg>
+      </div>
+
       <div class="container">
         <div class="diferenciais-wrapper">
           <div class="diferenciais-info reveal-on-scroll">
